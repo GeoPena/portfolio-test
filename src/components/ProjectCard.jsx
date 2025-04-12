@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import PropTypes from 'prop-types';
 
 const ProjectCard = ({ imageSrc, title, description, tags, projectUrl }) => {
   return (
@@ -20,6 +21,14 @@ const ProjectCard = ({ imageSrc, title, description, tags, projectUrl }) => {
       </div>
     </div>
   );
+};
+
+ProjectCard.propTypes = {
+  imageSrc: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+  projectUrl: PropTypes.string.isRequired,
 };
 
 export default ProjectCard;

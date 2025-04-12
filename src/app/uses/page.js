@@ -1,9 +1,12 @@
-import "./uses.css";
+import PropTypes from 'prop-types';
+import './uses.css';
+
 export const metadata = {
-  title: "Portfolio - Uses",
-  description: "The uses page of my portfolio.",
+  title: 'Portfolio - Uses',
+  description: 'The uses page of my portfolio.',
 };
 
+// Componente UseCard con validación de propiedades
 const UseCard = ({ title, description }) => {
   return (
     <div className="uses-card">
@@ -13,6 +16,12 @@ const UseCard = ({ title, description }) => {
   );
 };
 
+UseCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
+
+// Componente UsesSection con validación de propiedades
 const UsesSection = ({ items }) => {
   return (
     <section className="uses-section">
@@ -32,89 +41,103 @@ const UsesSection = ({ items }) => {
   );
 };
 
+UsesSection.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      groupName: PropTypes.string.isRequired,
+      items: PropTypes.arrayOf(
+        PropTypes.shape({
+          title: PropTypes.string.isRequired,
+          description: PropTypes.string.isRequired,
+        })
+      ).isRequired,
+    })
+  ).isRequired,
+};
+
 const items = [
   {
-    groupName: "Workstation",
+    groupName: 'Workstation',
     items: [
       {
-        title: "Linux (Ubuntu)",
+        title: 'Linux (Ubuntu)',
         description:
-          "I use Ubuntu for most of my development work. I love its stability, open-source power, and how customizable it is for coding, scripting, and teaching.",
+          'I use Ubuntu for most of my development work. I love its stability, open-source power, and how customizable it is for coding, scripting, and teaching.',
       },
     ],
   },
   {
-    groupName: "Development tools",
+    groupName: 'Development tools',
     items: [
       {
-        title: "Java",
+        title: 'Java',
         description:
-          "I use Java for object-oriented programming, and it's a key language in my academic training. I'm currently using it for data structures and algorithm challenges.",
+          'I use Java for object-oriented programming, and it\'s a key language in my academic training. I\'m currently using it for data structures and algorithm challenges.',
       },
       {
-        title: "SQL",
+        title: 'SQL',
         description:
-          "Essential for querying databases. I use it for organizing and analyzing educational data, and for database design.",
+          'Essential for querying databases. I use it for organizing and analyzing educational data, and for database design.',
       },
       {
-        title: "Tableau",
+        title: 'Tableau',
         description:
-          "One of my favorite tools for data visualization. I use it to make sense of student performance data and create visual dashboards.",
+          'One of my favorite tools for data visualization. I use it to make sense of student performance data and create visual dashboards.',
       },
       {
-        title: "GAP",
+        title: 'GAP',
         description:
-          "Powerful software for computational group theory. I used it in my master’s thesis to explore algebraic structures.",
+          'Powerful software for computational group theory. I used it in my master’s thesis to explore algebraic structures.',
       },
     ],
   },
   {
-    groupName: "Design",
+    groupName: 'Design',
     items: [
       {
-        title: "Figma",
+        title: 'Figma',
         description:
-          "Great for designing UI components and collaborating on visual ideas. I use it for educational platform interfaces.",
+          'Great for designing UI components and collaborating on visual ideas. I use it for educational platform interfaces.',
       },
       {
-        title: "Whimsical",
+        title: 'Whimsical',
         description:
-          "Perfect for building diagrams and wireframes. I use it to plan lesson flow, site architecture, and project concepts.",
+          'Perfect for building diagrams and wireframes. I use it to plan lesson flow, site architecture, and project concepts.',
       },
     ],
   },
   {
-    groupName: "Productivity",
+    groupName: 'Productivity',
     items: [
       {
-        title: "Trello",
+        title: 'Trello',
         description:
-          "My go-to task management tool. I use it to organize my study plans, course deadlines, and project steps.",
+          'My go-to task management tool. I use it to organize my study plans, course deadlines, and project steps.',
       },
       {
-        title: "Slack",
+        title: 'Slack',
         description:
-          "I use Slack to communicate with coworkers and teams in educational projects, like at BYU or Ensign College.",
+          'I use Slack to communicate with coworkers and teams in educational projects, like at BYU or Ensign College.',
       },
     ],
   },
   {
-    groupName: "Math Teaching Tools",
+    groupName: 'Math Teaching Tools',
     items: [
       {
-        title: "Desmos",
+        title: 'Desmos',
         description:
-          "One of my favorite tools to teach algebra and graphing interactively. I use it in class and for creating visual resources.",
+          'One of my favorite tools to teach algebra and graphing interactively. I use it in class and for creating visual resources.',
       },
       {
-        title: "GeoGebra",
+        title: 'GeoGebra',
         description:
-          "Excellent for geometry, algebra, and calculus. I’ve used it to train teachers and create interactive lessons.",
+          'Excellent for geometry, algebra, and calculus. I’ve used it to train teachers and create interactive lessons.',
       },
       {
-        title: "Derivita",
+        title: 'Derivita',
         description:
-          "BYU’s online platform for calculus and algebra exercises. I helped create content using it as an Instructional Designer Assistant.",
+          'BYU’s online platform for calculus and algebra exercises. I helped create content using it as an Instructional Designer Assistant.',
       },
     ],
   },

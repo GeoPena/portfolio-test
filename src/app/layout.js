@@ -1,7 +1,7 @@
 // src/app/layout.js
 import { Roboto } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
+import ThemeProvider from "@/components/ThemeProvider";
 import Header from "@/components/Header";
 
 const roboto = Roboto({
@@ -19,8 +19,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
-      <body className={`${roboto.className}`}>
+      <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+      </head>
+      <body className={roboto.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="bg-white dark:bg-zinc-900 text-black dark:text-white transition-colors duration-300 min-h-screen flex flex-col">
             <Header />
