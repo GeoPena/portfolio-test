@@ -12,6 +12,7 @@ const nextConfigProd = {
   images: {
     loader: 'custom',
     loaderFile: './src/lib/image.loader.js',
+    unoptimized: true,
   },
 };
 
