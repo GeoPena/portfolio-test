@@ -72,7 +72,7 @@ const items = [
       {
         title: 'Java',
         description:
-          'I use Java for object-oriented programming, and it\'s a key language in my academic training. I\'m currently using it for data structures and algorithm challenges.',
+          'I use Java for object-oriented programming, and it&rsquo;s a key language in my academic training. I&rsquo;m currently using it for data structures and algorithm challenges.',
       },
       {
         title: 'SQL',
@@ -87,7 +87,7 @@ const items = [
       {
         title: 'GAP',
         description:
-          'Powerful software for computational group theory. I used it in my master’s thesis to explore algebraic structures.',
+          'Powerful software for computational group theory. I used it in my master&rsquo;s thesis to explore algebraic structures.',
       },
     ],
   },
@@ -132,12 +132,12 @@ const items = [
       {
         title: 'GeoGebra',
         description:
-          'Excellent for geometry, algebra, and calculus. I’ve used it to train teachers and create interactive lessons.',
+          'Excellent for geometry, algebra, and calculus. I&rsquo;ve used it to train teachers and create interactive lessons.',
       },
       {
         title: 'Derivita',
         description:
-          'BYU’s online platform for calculus and algebra exercises. I helped create content using it as an Instructional Designer Assistant.',
+          'BYU&rsquo;s online platform for calculus and algebra exercises. I helped create content using it as an Instructional Designer Assistant.',
       },
     ],
   },
@@ -151,7 +151,7 @@ export default function Uses() {
           Tools I use to teach, build, and stay inspired.
         </h1>
         <p className="text-gray-600 dark:text-gray-300">
-          Over the years, I've discovered a set of tools that empower both my teaching and my work as a developer.
+          Over the years, I&rsquo;ve discovered a set of tools that empower both my teaching and my work as a developer.
           From visualizing math concepts to organizing my learning and coding projects, these are the platforms and technologies
           I trust to get things done with clarity and creativity.
         </p>

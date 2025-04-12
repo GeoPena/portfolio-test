@@ -1,94 +1,88 @@
+import Image from 'next/image'; // 👈 Importa el componente de Next.js
+
 export const metadata = {
-  title: "Portfolio - About",
-  description: "The about page of my portfolio.",
+  title: 'Portfolio - Projects',
+  description: 'The projects page of my portfolio.',
 };
 
-export default function About() {
+import ProjectCard from '@/components/ProjectCard';
+import { LinkIcon } from 'lucide-react';
+
+const projects = [
+  {
+    id: 1,
+    imageSrc: '/nctm-logo.png',
+    company: 'NCTM Membership',
+    description: 'Member of the National Council of Teachers of Mathematics to stay current with math education trends and research.',
+    projectUrl: 'https://www.nctm.org/',
+  },
+  {
+    id: 2,
+    imageSrc: '/BYUPathway.png',
+    company: 'BYU–Pathway Worldwide',
+    description: 'Currently working as a Registration Agent, helping students from around the world access higher education opportunities.',
+    projectUrl: 'https://www.byupathway.edu/',
+  },
+  {
+    id: 3,
+    imageSrc: '/SEDBarranquilla.jpg',
+    company: 'Barranquilla Board of Education',
+    description: 'Worked as a high school math teacher, helping students succeed through personalized instruction and technology integration.',
+    projectUrl: 'https://barranquilla.gov.co/educacion',
+  },
+  {
+    id: 4,
+    imageSrc: '/PTA_logo.png',
+    company: 'Programa Todos a Aprender',
+    description: 'Served as a national teacher trainer, coaching elementary educators in math and language through the Ministry of Education.',
+    projectUrl: 'https://www.colombiaaprende.edu.co/contenidos/curso/cursos-virtuales-programa-todos-aprender',
+  },
+  {
+    id: 5,
+    imageSrc: '/cda-logo.png',
+    company: 'CDA Gigantes 2021',
+    description: 'Created educational content for teacher professional development, including a video training series for PTA.',
+    projectUrl: 'https://www.youtube.com/@CDAGigantes',
+  },
+  {
+    id: 6,
+    imageSrc: '/Youtube_logo.png',
+    company: 'My YouTube Channel',
+    description: 'Personal channel where I share educational math content, music arrangements, and instructional videos.',
+    projectUrl: 'https://www.youtube.com/@geovanny84',
+  },
+];
+
+export default function Projects() {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-12 flex flex-col-reverse md:flex-row gap-12 justify-center">
-      <div className="w-full md:max-w-[464px]">
-        <h1 className="text-5xl font-bold leading-[56px] text-gray-900 dark:text-white max-w-[464px]">
-          I’m Geo. I live in Provo, where I bring math, education, and technology together.
-        </h1>
-        <div className="mt-6 space-y-4 text-gray-700 dark:text-gray-300">
-          <p>
-            I am a Colombian educator with over a decade of experience teaching mathematics across different levels, including to students with hearing impairments. I hold a Bachelor's degree in Math Education and a Master of Science in Mathematics, and I'm currently pursuing an Associate Degree in Data Science at Ensign College in Salt Lake City, Utah.
-          </p>
-          <p>
-            Throughout my career, I’ve been passionate about integrating technology in math education. I’ve worked with tools like GeoGebra, H5P, Desmos, and Derivita to make learning more engaging. In the U.S., I’ve collaborated with BYU's Continuing Education department as an Instructional Designer Assistant and currently support students as a Registration Agent with BYU Pathway.
-          </p>
-          <p>
-            I’m driven by the belief that education can be more equitable and impactful through data. That’s why I’m building skills in SQL, Python, and Tableau to apply data science for holistic assessment and improvement strategies in learning environments.
-          </p>
-          <p>
-            Beyond work and study, I enjoy spending time with my wife Katia and our 6-year-old son José. I also love music (especially choir direction), fútbol (soccer and American), and meaningful service in my community. My project "Math for All LLC" reflects my long-term vision to empower vulnerable populations in the U.S. with accessible math learning.
-          </p>
-        </div>
+    <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <h1 className="text-4xl font-bold text-left mb-4">Building bridges between math, people, and technology.</h1>
+      <p className="text-gray-600 dark:text-gray-400 text-left max-w-2xl mx-auto mb-10">
+        From classroom innovation in Colombia to data-driven solutions in the U.S., these projects represent my commitment to making quality math education accessible and impactful.
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projects.map((project) => (
+          <div key={project.id} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div className="mb-4 flex items-center space-x-3">
+              <Image
+                src={project.imageSrc}
+                alt={`${project.company} Logo`}
+                width={48}
+                height={48}
+                className="object-contain rounded"
+              />
+              <h2 className="text-lg font-semibold">{project.company}</h2>
+            </div>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
+            <div className="flex items-center space-x-2">
+              <LinkIcon className="text-gray-500" size={18} />
+              <a href={project.projectUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                {project.projectUrl}
+              </a>
+            </div>
+          </div>
+        ))}
       </div>
-
-      <div className="w-full md:max-w-[464px] flex flex-col items-center md:items-start">
-        <img src="/GeoPhoto.jpg" alt="Geo" className="rounded-xl w-full max-w-[300px] object-cover" />
-
-        <ul className="mt-6 space-y-2 text-sm text-gray-700 dark:text-gray-300">
-          <li className="flex items-center gap-2">
-            <a
-              href="https://x.com/geovanny84"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-blue-600 transition-colors"
-            >
-              <span>
-                {/* Ícono de X */}
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x-icon lucide-x">
-                  <path d="M18 6 6 18" />
-                  <path d="m6 6 12 12" />
-                </svg>
-              </span>
-              Follow me on X
-            </a>
-          </li>
-          <li className="flex items-center gap-2">
-            <a
-              href="https://github.com/GeoPena"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-gray-900 transition-colors"
-            >
-              <span>
-                {/* Ícono de GitHub */}
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-github-icon lucide-github">
-                  <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                  <path d="M9 18c-4.51 2-5-2-7-2" />
-                </svg>
-              </span>
-              Follow me on GitHub
-            </a>
-          </li>
-          <li className="flex items-center gap-2">
-            <a
-              href="https://www.linkedin.com/in/GeovannyPenaRueda/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-blue-700 transition-colors"
-            >
-              <span>
-                {/* Ícono de LinkedIn */}
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-linkedin-icon lucide-linkedin">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                  <rect width="4" height="12" x="2" y="9" />
-                  <circle cx="4" cy="4" r="2" />
-                </svg>
-              </span>
-              Connect with me on LinkedIn
-            </a>
-          </li>
-          <li className="flex items-center gap-2">
-            <a href="mailto:geovanny84@gmail.com" className="flex items-center gap-2 hover:text-red-600 transition-colors">
-              <span>📧</span> geovanny84@gmail.com
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
+    </main>
   );
 }

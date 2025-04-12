@@ -62,18 +62,18 @@ export default function Home() {
           Educator, Data Enthusiast, and Advocate for Accessible Math Education
         </h1>
         <p className="text-gray-600 dark:text-gray-300 mt-4">
-          I’m <strong>Geovanny Peña</strong>, a passionate educator with over a decade of
+          I&apos;m <strong>Geovanny Peña</strong>, a passionate educator with over a decade of
           experience teaching math in Colombia, currently pursuing an Associate Degree in Data
           Science at Ensign College in Salt Lake City.
         </p>
         <p className="text-gray-600 dark:text-gray-300 mt-2">
-          My academic journey includes a Master’s in Mathematical Sciences and a Bachelor’s in
-          Math Education. I've worked as a high school teacher, a government teacher trainer, and
+          My academic journey includes a Master&apos;s in Mathematical Sciences and a Bachelor&apos;s in
+          Math Education. I&apos;ve worked as a high school teacher, a government teacher trainer, and
           currently support students as a Registration Agent at BYU–Pathway.
         </p>
         <p className="text-gray-600 dark:text-gray-300 mt-2">
           I specialize in integrating technology into learning using tools like <strong>Desmos</strong>,{" "}
-          <strong>GeoGebra</strong>, <strong>H5P</strong>, and <strong>Derivita</strong>. I'm also
+          <strong>GeoGebra</strong>, <strong>H5P</strong>, and <strong>Derivita</strong>. I&apos;m also
           building <strong>Math for All LLC</strong>, an initiative to train teachers and provide
           equitable math tools for underserved communities.
         </p>
@@ -107,7 +107,7 @@ export default function Home() {
           <Article
             date="September 2018"
             title="Some Characterization of Supersolubility"
-            description="A meritorious master's thesis exploring concepts in Group Theory using GAP software. Developed as part of my MSc in Mathematics at Universidad del Atlántico."
+            description="A meritorious master&apos;s thesis exploring concepts in Group Theory using GAP software. Developed as part of my MSc in Mathematics at Universidad del Atlántico."
             href="/thesis.pdf"
           />
           <Article
@@ -119,7 +119,7 @@ export default function Home() {
           <Article
             date="2021 (Colombia)"
             title="Geometry and Movements"
-            description="A professional development session delivered to elementary math teachers through the Colombian Ministry of Education's 'Todos a Aprender' program."
+            description="A professional development session delivered to elementary math teachers through the Colombian Ministry of Education&apos;s &quot;Todos a Aprender&quot; program."
             href="/GeometryPTA.pdf"
           />
         </section>

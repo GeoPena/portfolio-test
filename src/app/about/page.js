@@ -3,31 +3,39 @@ export const metadata = {
   description: "The about page of my portfolio.",
 };
 
+import Image from "next/image";
+
 export default function About() {
   return (
     <section className="max-w-7xl mx-auto px-4 py-12 flex flex-col-reverse md:flex-row gap-12 justify-center">
       <div className="w-full md:max-w-[464px]">
         <h1 className="text-5xl font-bold leading-[56px] text-gray-900 dark:text-white max-w-[464px]">
-          I’m Geo. I live in Provo, where I bring math, education, and technology together.
+          I&apos;m Geo. I live in Provo, where I bring math, education, and technology together.
         </h1>
         <div className="mt-6 space-y-4 text-gray-700 dark:text-gray-300">
           <p>
-            I am a Colombian educator with over a decade of experience teaching mathematics across different levels, including to students with hearing impairments. I hold a Bachelor's degree in Math Education and a Master of Science in Mathematics, and I'm currently pursuing an Associate Degree in Data Science at Ensign College in Salt Lake City, Utah.
+            I am a Colombian educator with over a decade of experience teaching mathematics across different levels, including to students with hearing impairments. I hold a Bachelor&apos;s degree in Math Education and a Master of Science in Mathematics, and I&apos;m currently pursuing an Associate Degree in Data Science at Ensign College in Salt Lake City, Utah.
           </p>
           <p>
-            Throughout my career, I’ve been passionate about integrating technology in math education. I’ve worked with tools like GeoGebra, H5P, Desmos, and Derivita to make learning more engaging. In the U.S., I’ve collaborated with BYU's Continuing Education department as an Instructional Designer Assistant and currently support students as a Registration Agent with BYU Pathway.
+            Throughout my career, I&apos;ve been passionate about integrating technology in math education. I&apos;ve worked with tools like GeoGebra, H5P, Desmos, and Derivita to make learning more engaging. In the U.S., I&apos;ve collaborated with BYU&apos;s Continuing Education department as an Instructional Designer Assistant and currently support students as a Registration Agent with BYU Pathway.
           </p>
           <p>
-            I’m driven by the belief that education can be more equitable and impactful through data. That’s why I’m building skills in SQL, Python, and Tableau to apply data science for holistic assessment and improvement strategies in learning environments.
+            I&apos;m driven by the belief that education can be more equitable and impactful through data. That&apos;s why I&apos;m building skills in SQL, Python, and Tableau to apply data science for holistic assessment and improvement strategies in learning environments.
           </p>
           <p>
-            Beyond work and study, I enjoy spending time with my wife Katia and our 6-year-old son José. I also love music (especially choir direction), fútbol (soccer and American), and meaningful service in my community. My project "Math for All LLC" reflects my long-term vision to empower vulnerable populations in the U.S. with accessible math learning.
+            Beyond work and study, I enjoy spending time with my wife Katia and our 6-year-old son José. I also love music (especially choir direction), fútbol (soccer and American), and meaningful service in my community. My project &quot;Math for All LLC&quot; reflects my long-term vision to empower vulnerable populations in the U.S. with accessible math learning.
           </p>
         </div>
       </div>
 
       <div className="w-full md:max-w-[464px] flex flex-col items-center md:items-start">
-        <img src="/GeoPhoto.jpg" alt="Geo" className="rounded-xl w-full max-w-[300px] object-cover" />
+        <Image
+          src="/GeoPhoto.jpg"
+          alt="Geo"
+          width={300}
+          height={400}
+          className="rounded-xl w-full max-w-[300px] object-cover"
+        />
 
         <ul className="mt-6 space-y-2 text-sm text-gray-700 dark:text-gray-300">
           <li className="flex items-center gap-2">
