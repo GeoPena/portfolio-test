@@ -11,7 +11,7 @@ const nextConfigProd = {
   basePath: '/portfolio-test',
   images: {
     loader: 'custom',
-    loaderFile: './src/lib/image.loader.js',
+    loaderFile: './src/image.loader.js',
     unoptimized: true,
   },
 };
